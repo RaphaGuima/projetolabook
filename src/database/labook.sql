@@ -42,18 +42,18 @@ DROP TABLE posts;
 DROP TABLE likes_dislikes;
 
 INSERT INTO users (id, name, email, password, role)
-VALUES ('u001', 'Virgínia Fonseca', 'vivi22@email.com', 'f12345#', 'NORMAL'),
-       ('u002', 'Mirella Santos', 'milla_ss@email.com', 'mi54321*', 'ADMIN'),
-       ('u003', 'Daniel Lima', 'dani_lima@email.com', 'lima12654%', 'NORMAL'),
-       ('u004', 'Sarah Oliveira', 'sarinhah@email.com', 'sarahholiver12', 'ADMIN'),
-       ('u005', 'Mônica Silva', 'moni_silva@email.com', 'monica123@', 'NORMAL'),
-       ('u006', 'Felipe Rodrigues', 'felipe@email.com', 'felipe5#', 'NORMAL');
+VALUES ('u001', 'Gleicielli Braga', 'gleici4@email.com', 'sd85s5#', 'NORMAL'),
+       ('u002', 'Larisa Silva', 'larisil@email.com', '54dsa32l1*', 'ADMIN'),
+       ('u003', 'Bruno Guimarães', 'guibruno@email.com', 'ldasd4%', 'NORMAL'),
+       ('u004', 'Soraia Lima', 'sosoh22@email.com', 'sdpawkd34', 'ADMIN'),
+       ('u005', 'Douglas Victor', 'dgzin7@email.com', 'da89s5d', 'NORMAL'),
+       ('u006', 'Laura Souza', 'laurinhaso@email.com', 'asdgq94', 'NORMAL');
 
 INSERT INTO posts (id, creator_id, content)
-VALUES ('p001', 'u001', 'Resiliência é ter força dentro de si para sempre recomeçar.'),
-       ('p002', 'u002', 'Seja de verdade em tudo que você faz.'),
-       ('p003', 'u003', 'Hoje comecei o meu terceiro período na faculdade de Computação'),
-       ('p004', 'u003', 'Começando os estudos de JavaScript! :D');     
+VALUES ('p001', 'u001', 'A vida é feita de escolhas, e cada escolha que fazemos define quem somos.'),
+       ('p002', 'u002', 'Somos a média das cinco pessoas que convivemos.'),
+       ('p003', 'u003', 'Não espere pelo momento perfeito, o momento perfeito é o agora'),
+       ('p004', 'u003', 'A persistência é o caminho do êxito.');     
 
    
 INSERT INTO likes_dislikes (user_id, post_id, like)
