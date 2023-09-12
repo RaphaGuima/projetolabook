@@ -92,13 +92,13 @@ export class PostBusiness {
         const { idEdit, content, token } = input
 
         if (token === undefined) {
-            throw new BadRequestError("Insira o 'token'")
+            throw new BadRequestError("Insira o 'Token'")
         }
 
         const payload = this.tokenManager.getPayload(token)
 
         if (payload === null) {
-            throw new BadRequestError("O 'token' não é válido!")
+            throw new BadRequestError("O 'Token' não é válido!")
         }
 
         if (typeof content !== "string") {
@@ -108,7 +108,7 @@ export class PostBusiness {
         const postExist = await this.postDatabase.findPostById(idEdit)
 
         if (!postExist) {
-            throw new BadRequestError("O 'id' não foi encontrado!")
+            throw new BadRequestError("O 'Id' não foi encontrado!")
         }
 
         const creatorId = payload.id
@@ -145,19 +145,19 @@ export class PostBusiness {
         const { idDelete, token } = input
 
         if (token === undefined) {
-            throw new BadRequestError("Insira o 'token'")
+            throw new BadRequestError("Insira o 'Token'")
         }
 
         const payload = this.tokenManager.getPayload(token)
 
         if (payload === null) {
-            throw new BadRequestError("O 'token' não é válido!")
+            throw new BadRequestError("O 'Token' não é válido!")
         }
 
         const postExist = await this.postDatabase.findPostById(idDelete)
 
         if (!postExist) {
-            throw new BadRequestError("O 'id' não foi encontrado!")
+            throw new BadRequestError("O 'Id' não foi encontrado!")
         }
 
         const creatorId = payload.id
@@ -174,13 +174,13 @@ export class PostBusiness {
         const { idLikeDislike, token, like } = input
 
         if (token === undefined) {
-            throw new BadRequestError("Insira o 'token'")
+            throw new BadRequestError("Insira o 'Token'")
         }
 
         const payload = this.tokenManager.getPayload(token)
 
         if (payload === null) {
-            throw new BadRequestError("O 'token' não é válido!")
+            throw new BadRequestError("O 'Token' não é válido!")
         }
 
         if (typeof like !== "boolean") {
@@ -190,7 +190,7 @@ export class PostBusiness {
         const postCreatorDB = await this.postDatabase.finPostCreatorById(idLikeDislike)
 
         if (!postCreatorDB) {
-            throw new BadRequestError("O 'id' não foi encontrado!")
+            throw new BadRequestError("O 'Td' não foi encontrado!")
         }
 
         const userId = payload.id

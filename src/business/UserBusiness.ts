@@ -8,6 +8,7 @@ import { TokenManager, TokenPayload } from "../services/TokenManager"
 import { ROLES, UserDB } from "../types"
 import { HashManager } from "../services/HashManager"
 
+
 export class UserBusiness {
     constructor(
         private userDBInstance: UserDatabase,
